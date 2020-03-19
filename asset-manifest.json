@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/quiz-throne-of-glass/static/css/main.51c12ec3.chunk.css",
+    "main.js": "/quiz-throne-of-glass/static/js/main.c1012e5a.chunk.js",
+    "main.js.map": "/quiz-throne-of-glass/static/js/main.c1012e5a.chunk.js.map",
+    "runtime-main.js": "/quiz-throne-of-glass/static/js/runtime-main.371de2c9.js",
+    "runtime-main.js.map": "/quiz-throne-of-glass/static/js/runtime-main.371de2c9.js.map",
+    "static/js/2.775dc776.chunk.js": "/quiz-throne-of-glass/static/js/2.775dc776.chunk.js",
+    "static/js/2.775dc776.chunk.js.map": "/quiz-throne-of-glass/static/js/2.775dc776.chunk.js.map",
+    "index.html": "/quiz-throne-of-glass/index.html",
+    "precache-manifest.0621748769c4684672887183f1f7f5ec.js": "/quiz-throne-of-glass/precache-manifest.0621748769c4684672887183f1f7f5ec.js",
+    "service-worker.js": "/quiz-throne-of-glass/service-worker.js",
+    "static/css/main.51c12ec3.chunk.css.map": "/quiz-throne-of-glass/static/css/main.51c12ec3.chunk.css.map",
+    "static/js/2.775dc776.chunk.js.LICENSE.txt": "/quiz-throne-of-glass/static/js/2.775dc776.chunk.js.LICENSE.txt",
+    "static/media/main.min.css": "/quiz-throne-of-glass/static/media/hawk.91513564.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.371de2c9.js",
+    "static/js/2.775dc776.chunk.js",
+    "static/css/main.51c12ec3.chunk.css",
+    "static/js/main.c1012e5a.chunk.js"
+  ]
+}
