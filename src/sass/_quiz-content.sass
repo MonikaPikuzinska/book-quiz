@@ -1,0 +1,68 @@
+.quiz-content
+    position: relative
+    top: 100px
+    margin: 0 auto
+    width: 550px
+    height: 650px
+    background-color: white
+    text-align: center
+    border-radius: 25px
+    color: #425439
+    font-family: 'Poppins', sans-serif
+    @media screen and ( max-width: 1024px )
+        width: 50%
+        height: 70%  
+    @media screen and ( max-width: 640px )
+        width: 70%
+        height: 70%
+    @media screen and ( max-width: 400px )
+        top: 50px
+              
+    &_question-counter
+        padding-top: 20px
+        padding-bottom: 10px
+        opacity: .7
+        @media screen and ( max-width: 460px )
+            font-size: 18px
+        @media screen and ( max-width: 400px )
+            font-size: 15px
+            
+    &_question
+      padding-bottom: 15px
+      font-size: 28px
+      @media screen and ( max-width: 460px )
+          font-size: 20px
+      @media screen and ( max-width: 400px )
+          font-size: 15px   
+          
+    &_options
+        font-size: 18px
+        padding: 20px 0   
+        margin: 5px 0
+        border-radius: 5px
+        &:hover
+            cursor: pointer
+        &.selected
+            background-image: url('../img/hawk.svg')
+            background-color: #104539
+            color: white
+            background-position-x: 95%
+            background-position-y: 50%
+            background-size: 18px
+            background-repeat: no-repeat
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
+        @media screen and ( max-width: 460px )
+            font-size: 15px
+        @media screen and ( max-width: 400px )
+            font-size: 12px
+            padding: 10px 0
+    &_btn
+        margin: 10px
+        padding: 10px 20px
+        font-size: 15px
+        color: #425439
+        background-color: white
+        border: 2px solid #104539
+        border-radius: 5px
+        &:hover
+            cursor: pointer
