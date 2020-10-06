@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8fcedbc70222cf3a85a8063a6417236a",
+    "revision": "c642028baee6aa8e33fb4fced9f19df2",
     "url": "/quiz-throne-of-glass/index.html"
   },
   {
-    "revision": "0a5499228ad2aa5a811c",
-    "url": "/quiz-throne-of-glass/static/css/main.51c12ec3.chunk.css"
+    "revision": "0c81cc676aca7db5eb7d",
+    "url": "/quiz-throne-of-glass/static/css/main.dc6f9f2b.chunk.css"
   },
   {
     "revision": "42503a6a457fba2727a0",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/quiz-throne-of-glass/static/js/2.775dc776.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0a5499228ad2aa5a811c",
+    "revision": "0c81cc676aca7db5eb7d",
     "url": "/quiz-throne-of-glass/static/js/main.3f45aaed.chunk.js"
   },
   {
