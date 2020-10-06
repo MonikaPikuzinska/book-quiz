@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/quiz-throne-of-glass/precache-manifest.7c695e5fd68f0f8a591a77cff39c2ebf.js"
+  "/quiz-throne-of-glass/precache-manifest.716c2a3fb2877e3b8b6ef2e3c11d8619.js"
 );
 
 self.addEventListener('message', (event) => {

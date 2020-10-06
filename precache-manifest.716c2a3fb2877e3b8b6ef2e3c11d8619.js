@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c642028baee6aa8e33fb4fced9f19df2",
+    "revision": "3bde6f971b6205f1f5f6d5c015b9ee1c",
     "url": "/quiz-throne-of-glass/index.html"
   },
   {
