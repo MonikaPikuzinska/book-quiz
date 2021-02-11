@@ -4,6 +4,7 @@ import crown from '../img/crown.svg';
 import harry from '../img/harry-potter.svg';
 import twilight from '../img/twilight.svg';
 import hunger from '../img/hunger.svg';
+import TranslationExamples from './TranslationExamples';
 
 const HomePage = () => {
 
@@ -33,7 +34,9 @@ const HomePage = () => {
                         <p className="self-center block p-3 text-red-400 text-2xl font-bold">{t('welcome.hunger')}</p>
                     </div>
                 </div>
+               {/*  <TranslationExamples/> */}
             </div>
+          
         </>
      );
 }

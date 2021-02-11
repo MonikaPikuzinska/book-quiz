@@ -2,9 +2,14 @@ export const quizData = {
   "Throne": [
     {
       id: 1,
-      question: ` What animal Rowan turns into?`,
-      options: [`panther`, `hawk`, `wolf`, `dragonfly`],
-      answer: `hawk`
+      question: {
+        key: "what_animal_rowan",
+        en: `What animal Rowan turns into?`,
+      },
+      options: {
+        en: [`panther`, `hawk`, `wolf`, `dragonfly`]
+      },
+      answer: 1
     },
     {
       id: 2,
