@@ -10,7 +10,7 @@ function Questions(props) {
             <FinishCard counter={counter}/>
          :<>        
             <h2 className="quiz-content_question-counter">{currentQuestion===0? `Question`: `Questions`}  {currentQuestion +1}  out of {quizData.length} remaining </h2>
-        <h1 className="quiz-content_question">{questions} </h1>
+            <h1 className="quiz-content_question">{questions} </h1>
             {options.map(option => (
             <div onClick={()=>handleCheckAnswer(option)} className={myAnswer === option ? "quiz-content_options selected" : "quiz-content_options"} >{option}</div>
             ))}
@@ -19,9 +19,9 @@ function Questions(props) {
                 onClick={handleChangeQuestion}
               >
                 Next
-              </button> :
-              <button className="quiz-content_btn" onClick={handleFinish}>Finish</button>}
-            </>
+            </button> :
+            <button className="quiz-content_btn" onClick={handleFinish}>Finish</button>}
+          </>
     )
 }
 

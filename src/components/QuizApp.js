@@ -32,48 +32,48 @@ class QuizApp extends Component {
   }
   componentDidMount(){
         this.loadQuizData();
-      }
+  }
 
-      componentDidUpdate(prevProps, prevState) {
-        if (this.state.currentQuestion !== prevState.currentQuestion) {
-          this.setState(() => {
-            return {
-              questions: quizData[this.state.currentQuestion].question,
-              options: quizData[this.state.currentQuestion].options,
-              answer: quizData[this.state.currentQuestion].answer
-            };
-          });
-        }
-      }
-
-    handleCheckAnswer=(myAnswer)=>{
-      this.setState({
-        myAnswer: myAnswer
-      })
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.currentQuestion !== prevState.currentQuestion) {
+      this.setState(() => {
+        return {
+          questions: quizData[this.state.currentQuestion].question,
+          options: quizData[this.state.currentQuestion].options,
+          answer: quizData[this.state.currentQuestion].answer
+        };
+      });
     }
+  }
 
-    handleFinish = ()=>{
-      this.setState({
-        isFinished: true
-      })
-    }
+  handleCheckAnswer=(myAnswer)=>{
+    this.setState({
+      myAnswer: myAnswer
+    })
+  }
+
+  handleFinish = ()=>{
+    this.setState({
+      isFinished: true
+    })
+  }
     
-    render() {
-        return (
-          <div className="quiz-content">
-            <Questions 
-            questions={this.state.questions} 
-            options={this.state.options}
-            handleCheckAnswer={this.handleCheckAnswer}
-            myAnswer={this.state.myAnswer}
-            currentQuestion={this.state.currentQuestion}
-            handleChangeQuestion={this.handleChangeQuestion}
-            handleFinish={this.handleFinish}
-            isFinished={this.state.isFinished}
-            counter={this.state.counter}/>
-          </div>
-        );
-      }
+  render() {
+    return (
+      <div className="quiz-content">
+        <Questions 
+          questions={this.state.questions} 
+          options={this.state.options}
+          handleCheckAnswer={this.handleCheckAnswer}
+          myAnswer={this.state.myAnswer}
+          currentQuestion={this.state.currentQuestion}
+          handleChangeQuestion={this.handleChangeQuestion}
+          handleFinish={this.handleFinish}
+          isFinished={this.state.isFinished}
+          counter={this.state.counter}/>
+      </div>
+    );
+  }
     
 }        
 

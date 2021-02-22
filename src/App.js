@@ -1,13 +1,12 @@
 import React from 'react';
-import QuizApp from './components/QuizApp';
-import './css/main.min.css';
+import './style.css';
+import HomePage from './components/HomePage';
 
 function App() {
   return (
-    <div className="app">
-      <h1 className="app_header">How well do you know Throne of glass series?</h1>
-      <QuizApp/>
-    </div>
+      <div className="app">
+        <HomePage/>
+      </div>
   );
 }
 
