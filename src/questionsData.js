@@ -1,5 +1,6 @@
-export const quizData = {
-  "Throne of glass": [
+export const quizData = [{
+    name: "Throne of glass",
+    questions: [
     {
       id: 1,
       question: {
@@ -180,9 +181,10 @@ export const quizData = {
       },
       answer: 2
     }
-  ],
-
-  "Harry Potter": [
+  ]},
+  {
+    name: "Harry Potter",
+    questions: [
     {
       id: 1,
       question: {
@@ -303,9 +305,10 @@ export const quizData = {
       },
       answer: 2
     }
-  ],
-
-  "Twilight": [
+  ]},
+  {
+    name: "Twilight",
+    questions: [
     {
       id: 1,
       question: {
@@ -426,9 +429,10 @@ export const quizData = {
       },
       answer: 1
     }
-  ],
-
-  "The Hunger Games": [
+  ]},
+  {
+    name: "The Hunger Games",
+    questions: [
     {
       id: 1,
       question: {
@@ -513,6 +517,6 @@ export const quizData = {
       },
       answer: 0
     }
-  ]
-};
+  ]}
+]
   
