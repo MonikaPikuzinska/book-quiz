@@ -1,9 +1,14 @@
 {
     "welcome": {
         "title": "Quizy książkowe",
-        "throne": "Szklany tron",
-        "harry": "Harry Potter",
-        "twilight": "Zmierzch",
-        "hunger": "Igrzyska śmierci"
+        "Throne of glass": "Szklany tron",
+        "Harry Potter": "Harry Potter",
+        "Twilight": "Zmierzch",
+        "The Hunger Games": "Igrzyska śmierci"
+    },
+    "quiz": {
+        "main": "Strona główna",
+        "next": "Następne",
+        "finish": "Koniec"
     }
 }
