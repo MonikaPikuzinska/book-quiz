@@ -1,9 +1,19 @@
 {
     "welcome": {
         "title": "Book quizzes",
-        "throne": "Throne of glass",
-        "harry": "Harry Potter",
-        "twilight": "Twilight",
-        "hunger": "The Hunger Games"
+        "Throne of glass": "Throne of glass",
+        "Harry Potter": "Harry Potter",
+        "Twilight": "Twilight",
+        "The Hunger Games": "The Hunger Games"
+    },
+    "quiz": {
+        "main": "Home page",
+        "next": "Next",
+        "finish": "Finish"
+    },
+    "finish": {
+        "have": "You have ",
+        "points": "points",
+        "point": "point"
     }
 }

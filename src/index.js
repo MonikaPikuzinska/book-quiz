@@ -7,27 +7,33 @@ import {I18nextProvider} from "react-i18next";
 import i18next from "i18next";
 import common_pl from "./translation/pl/common.json";
 import common_en from "./translation/en/common.json";
+import { createStore } from 'redux';
+import allReducers from './reducers';
+import { Provider } from 'react-redux';
 
-
-    i18next.init({
-        interpolation: { escapeValue: false },  // React already does escaping
-        lng: 'en',                              // language to use
-        resources: {
-            en: {
-                common: common_en               // 'common' is our custom namespace
-            },
-            pl: {
-                common: common_pl
-            },
+i18next.init({
+    interpolation: { escapeValue: false },  
+    lng: 'en',                              
+    resources: {
+        en: {
+            common: common_en               
         },
-    });
+        pl: {
+            common: common_pl
+        },
+    },
+});
+
+const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
-    <React.StrictMode>
-        <I18nextProvider i18n={i18next}>
-            <App/>
-        </I18nextProvider>
-    </React.StrictMode>,
+    <Provider store={store}>
+        <React.StrictMode>
+            <I18nextProvider i18n={i18next}>
+                <App/>
+            </I18nextProvider>
+        </React.StrictMode>
+    </Provider>,
     document.getElementById('root')
 );
 

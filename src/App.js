@@ -1,12 +1,15 @@
 import React from 'react';
 import './style.css';
-import HomePage from './components/HomePage';
+import Pages from './components/Pages';
+import { BrowserRouter as Router } from 'react-router-dom'; 
 
 function App() {
   return (
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="app">
-        <HomePage/>
+        <Pages/>
       </div>
+    </Router>
   );
 }
 
