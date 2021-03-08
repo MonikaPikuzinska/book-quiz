@@ -33,6 +33,11 @@ function Quiz() {
           setCounter(counter+1);
         }
         setCurrentQuestion(currentQuestion+1);
+        let opt = document.querySelectorAll('.option');
+        opt.forEach(o=>{
+            o.classList.remove("bg-green-200")
+            o.classList.remove("bg-red-200")
+        })
       };
 
     const mounted = useRef(false);
@@ -74,7 +79,7 @@ function Quiz() {
                     <h2>{currentQuestion +1}  / {bookFound.questions.length} </h2>
                     <h1 className="text-center p-2 text-xl block italic font-bold">{questions} </h1>
                     {options.map((option, i)=> (
-                    <div id={i} onClick={()=>handleCheckAnswer(option, i)} className={rightAns ? "text-center p-4 cursor-pointer text-xl block bg-gray-700" : "text-center cursor-pointer p-4 text-xl block "} >{option}</div>
+                    <div id={i} onClick={()=>handleCheckAnswer(option, i)} className={rightAns ? "option text-center p-4 cursor-pointer text-xl block bg-gray-700" : "option text-center cursor-pointer p-4 text-xl block "} >{option}</div>
                     ))}
                     {currentQuestion<bookFound.questions.length-1 ?
                     <button className="self-center italic flex-grow-0 w-36 font-bold border border-gray-700 text-gray-700 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-gray-800 focus:outline-none focus:shadow-outline"

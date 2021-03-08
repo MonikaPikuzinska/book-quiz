@@ -10,5 +10,10 @@
         "main": "Home page",
         "next": "Next",
         "finish": "Finish"
+    },
+    "finish": {
+        "have": "You have ",
+        "points": "points",
+        "point": "point"
     }
 }

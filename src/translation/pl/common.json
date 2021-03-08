@@ -10,5 +10,10 @@
         "main": "Strona główna",
         "next": "Następne",
         "finish": "Koniec"
+    },
+    "finish": {
+        "have": "Masz ",
+        "points": "punktów",
+        "point": "punkt"
     }
 }
