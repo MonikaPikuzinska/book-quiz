@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/quiz-throne-of-glass/static/css/main.dc6f9f2b.chunk.css",
-    "main.js": "/quiz-throne-of-glass/static/js/main.3f45aaed.chunk.js",
-    "main.js.map": "/quiz-throne-of-glass/static/js/main.3f45aaed.chunk.js.map",
-    "runtime-main.js": "/quiz-throne-of-glass/static/js/runtime-main.371de2c9.js",
-    "runtime-main.js.map": "/quiz-throne-of-glass/static/js/runtime-main.371de2c9.js.map",
-    "static/js/2.775dc776.chunk.js": "/quiz-throne-of-glass/static/js/2.775dc776.chunk.js",
-    "static/js/2.775dc776.chunk.js.map": "/quiz-throne-of-glass/static/js/2.775dc776.chunk.js.map",
-    "index.html": "/quiz-throne-of-glass/index.html",
-    "precache-manifest.716c2a3fb2877e3b8b6ef2e3c11d8619.js": "/quiz-throne-of-glass/precache-manifest.716c2a3fb2877e3b8b6ef2e3c11d8619.js",
-    "service-worker.js": "/quiz-throne-of-glass/service-worker.js",
-    "static/css/main.dc6f9f2b.chunk.css.map": "/quiz-throne-of-glass/static/css/main.dc6f9f2b.chunk.css.map",
-    "static/js/2.775dc776.chunk.js.LICENSE.txt": "/quiz-throne-of-glass/static/js/2.775dc776.chunk.js.LICENSE.txt",
-    "static/media/main.min.css": "/quiz-throne-of-glass/static/media/hawk.91513564.svg"
+    "main.css": "/book-quiz/static/css/main.c708a36d.chunk.css",
+    "main.js": "/book-quiz/static/js/main.b564b92c.chunk.js",
+    "main.js.map": "/book-quiz/static/js/main.b564b92c.chunk.js.map",
+    "runtime-main.js": "/book-quiz/static/js/runtime-main.ca9e202b.js",
+    "runtime-main.js.map": "/book-quiz/static/js/runtime-main.ca9e202b.js.map",
+    "static/js/2.661e5ed0.chunk.js": "/book-quiz/static/js/2.661e5ed0.chunk.js",
+    "static/js/2.661e5ed0.chunk.js.map": "/book-quiz/static/js/2.661e5ed0.chunk.js.map",
+    "index.html": "/book-quiz/index.html",
+    "precache-manifest.fd896ca30c3712826d6fa5accffa67d0.js": "/book-quiz/precache-manifest.fd896ca30c3712826d6fa5accffa67d0.js",
+    "service-worker.js": "/book-quiz/service-worker.js",
+    "static/css/main.c708a36d.chunk.css.map": "/book-quiz/static/css/main.c708a36d.chunk.css.map",
+    "static/js/2.661e5ed0.chunk.js.LICENSE.txt": "/book-quiz/static/js/2.661e5ed0.chunk.js.LICENSE.txt",
+    "static/media/crown.svg": "/book-quiz/static/media/crown.f7f2571e.svg",
+    "static/media/harry-potter.svg": "/book-quiz/static/media/harry-potter.8606cb80.svg",
+    "static/media/hunger.svg": "/book-quiz/static/media/hunger.b6762d5b.svg",
+    "static/media/twilight.svg": "/book-quiz/static/media/twilight.8a971ae4.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.371de2c9.js",
-    "static/js/2.775dc776.chunk.js",
-    "static/css/main.dc6f9f2b.chunk.css",
-    "static/js/main.3f45aaed.chunk.js"
+    "static/js/runtime-main.ca9e202b.js",
+    "static/js/2.661e5ed0.chunk.js",
+    "static/css/main.c708a36d.chunk.css",
+    "static/js/main.b564b92c.chunk.js"
   ]
 }
