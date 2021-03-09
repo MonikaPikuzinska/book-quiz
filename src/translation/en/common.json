@@ -1,10 +1,10 @@
 {
     "welcome": {
         "title": "Book quizzes",
-        "Throne of glass": "Throne of glass",
-        "Harry Potter": "Harry Potter",
+        "Throne_of_glass": "Throne of glass",
+        "Harry_Potter": "Harry Potter",
         "Twilight": "Twilight",
-        "The Hunger Games": "The Hunger Games"
+        "The_Hunger_Games": "The Hunger Games"
     },
     "quiz": {
         "main": "Home page",

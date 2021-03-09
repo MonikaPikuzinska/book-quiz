@@ -1,13 +1,13 @@
 const bookReducer = (state = 'none', action) => {
     switch (action.type) {
         case 'throne':
-            return state = 'Throne of glass';
+            return state = 'Throne_of_glass';
         case 'harry':
-            return state = 'Harry Potter';
+            return state = 'Harry_Potter';
         case 'twilight':
             return state = 'Twilight';
         case 'hunger':
-            return state = 'The Hunger Games';
+            return state = 'The_Hunger_Games';
     
         default:
             return state;

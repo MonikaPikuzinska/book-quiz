@@ -7,8 +7,9 @@ import {I18nextProvider} from "react-i18next";
 import i18next from "i18next";
 import common_pl from "./translation/pl/common.json";
 import common_en from "./translation/en/common.json";
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import allReducers from './reducers';
+import thunk from "redux-thunk";
 import { Provider } from 'react-redux';
 
 i18next.init({

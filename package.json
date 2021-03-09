@@ -1,5 +1,5 @@
 {
-  "homepage": "https://monikapikuzinska.github.io/quiz-throne-of-glass/",
+  "homepage": "https://monikapikuzinska.github.io/book-quiz/",
   "name": "quiz-throne-of-glass",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "autoprefixer": "^10.2.4",
+    "axios": "^0.21.1",
     "gh-pages": "^2.2.0",
     "i18next": "^19.8.7",
     "i18next-browser-languagedetector": "^6.0.1",

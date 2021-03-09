@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
-import {quizData} from '../questionsData';
 import FinishCard from './FinishCard';
 import { Link } from 'react-router-dom'; 
 import {useTranslation} from "react-i18next";
+import axios from 'axios';
 
 function Quiz() {
     const {t, i18n} = useTranslation('common');
@@ -12,6 +12,7 @@ function Quiz() {
     const color = useSelector(state => state.color);
     const lang = useSelector(state => state.lang);
 
+    const [choosenBook, setChoosenBook] = useState([]);
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [options, setOptions] = useState([]);
     const [questions, setQuestions] = useState('');
@@ -21,13 +22,23 @@ function Quiz() {
     const [isFinished, setIsFinished] = useState(false);
     const [rightAns, setRightAns] = useState(false);
 
-    const bookFound = quizData.find(bookObj => bookObj.name === book);
-    const loadQuizData = () => {
-        setQuestions(bookFound.questions[currentQuestion].question[lang]);
-        setAnswer(bookFound.questions[currentQuestion].answer);
-        setOptions(bookFound.questions[currentQuestion].options[lang])
+    const API = `http://localhost:3000/${book}`;
+    
+    const getData = async() => {
+        const response = await axios.get(API);
+        const data = response.data;
+        setChoosenBook(data);
+        setQuestions(data[currentQuestion].question[lang])
+        setAnswer(data[currentQuestion].answer);
+        setOptions(data[currentQuestion].options[lang])
     };
     
+    const loadQuizData = () => {
+        setQuestions(choosenBook[currentQuestion].question[lang])
+        setAnswer(choosenBook[currentQuestion].answer);
+        setOptions(choosenBook[currentQuestion].options[lang])
+    };
+
     const handleChangeQuestion = () => {
         if(myAnswer===answer){
           setCounter(counter+1);
@@ -43,7 +54,7 @@ function Quiz() {
     const mounted = useRef(false);
     useEffect(() => {
         if(!mounted.current) {
-            loadQuizData();
+            getData();
             mounted.current = true;
         } else {
             loadQuizData();
@@ -76,12 +87,12 @@ function Quiz() {
                 <button className="italic flex-grow-0 w-36 font-bold border border-gray-700 text-gray-700 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-gray-800 focus:outline-none focus:shadow-outline"><Link to={'/'}>{t(`quiz.main`)}</Link></button>
                 <h2 className={`p-4 text-center self-center block italic font-bold text-8xl text-${color}-400`}>{t(`welcome.${book}`)}</h2>
                 <div className="flex flex-col self-center p-8 m-8 shadow-2xl">
-                    <h2>{currentQuestion +1}  / {bookFound.questions.length} </h2>
+                    <h2>{currentQuestion +1}  / {choosenBook.length} </h2>
                     <h1 className="text-center p-2 text-xl block italic font-bold">{questions} </h1>
                     {options.map((option, i)=> (
                     <div id={i} onClick={()=>handleCheckAnswer(option, i)} className={rightAns ? "option text-center p-4 cursor-pointer text-xl block bg-gray-700" : "option text-center cursor-pointer p-4 text-xl block "} >{option}</div>
                     ))}
-                    {currentQuestion<bookFound.questions.length-1 ?
+                    {currentQuestion<choosenBook.length-1 ?
                     <button className="self-center italic flex-grow-0 w-36 font-bold border border-gray-700 text-gray-700 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-gray-800 focus:outline-none focus:shadow-outline"
                         onClick={handleChangeQuestion}
                     >
