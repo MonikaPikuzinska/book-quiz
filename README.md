@@ -3,7 +3,7 @@
 Run 
 ```
 cd src
-json-server --watch db.json
+npm run server
 ```
 and on the second terminal run
 `npm start`
