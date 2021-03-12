@@ -1,5 +1,4 @@
 {
-    
     "Throne_of_glass": [
     {
       "id": 1,
@@ -11,7 +10,7 @@
         "en": ["panther", "hawk", "wolf", "dragonfly"],
         "pl": ["pantera", "jastrząb", "wilk", "ważka"]
       },
-      "answer": 1
+      "all_question": 15
     },
     {
       "id": 2,
@@ -23,7 +22,7 @@
         "en": ["Aelin Ashryver Whitethorn Galathynius", "Aelin Ashriver Whitethorn Galathynius", "Lysandra Ashryver née Ennar", "Aelin Ashryver Ennar Galathynius"],
         "pl": ["Aelin Ashryver Whitethorn Galathynius", "Aelin Ashriver Whitethorn Galathynius", "Lysandra Ashryver née Ennar", "Aelin Ashryver Ennar Galathynius"]
       },
-      "answer": 0
+      "all_question": 15
     },
     {
       "id": 3,
@@ -35,7 +34,7 @@
         "en": ["Orynth", "Rifthold", "Eyllwe", "Varese"],
         "pl": ["w Orynth", "w Rifthold", "w Eyllwe", "w Varese"]
       },
-      "answer": 0
+      "all_question": 15
     },
     {
       "id": 4,
@@ -47,7 +46,7 @@
         "en": ["20", "27", "17", "19"],
         "pl": ["20", "27", "17", "19"]
       },
-      "answer": 3
+      "all_question": 15
     },
       {
       "id": 5,
@@ -59,7 +58,7 @@
         "en": ["Fire", "Fleetfoot", "Arrowhead", "Tulip"],
         "pl": ["Ogień", "Strzała", "Błyskawica", "Tulipan"]
       },
-      "answer": 1
+      "all_question": 15
     },
       {
       "id": 6,
@@ -71,7 +70,7 @@
         "en": ["assassin", "carter", "courtesan", "baker"],
         "pl": ["morderczyni", "sprzątaczka", "kurtyzana", "piekarka"]
       },
-      "answer": 2
+      "all_question": 15
     },
       {
       "id": 7,
@@ -83,7 +82,7 @@
         "en": ["Chaol Westfall", "Dorian Havilliard", "Celaena Sardothien", "Aelin Galathynius"],
         "pl": ["Chaol Westfall", "Dorian Havilliard", "Celaena Sardothien", "Aelin Galathynius"]
       },
-      "answer": 2
+      "all_question": 15
     },
       {
       "id": 8,
@@ -95,7 +94,7 @@
         "en": ["Rifthold", "Orynth", "Varese", "Meah"],
         "pl": ["Rifthold", "Orynth", "Varese", "Meah"]
       },
-      "answer": 0
+      "all_question": 15
     },
       {
       "id": 9,
@@ -107,7 +106,7 @@
         "en": ["Yellowlegs", "Fleetfoot", "Purebloods", "Blackbeaks"],
         "pl": ["Żółtostopa", "Żelaznozębna", "Czystokrwista", "Czarnodzioba"]
       },
-      "answer": 3
+      "all_question": 15
     },
       {
       "id": 10,
@@ -119,7 +118,7 @@
         "en": ["Meah", "Rifthold", "Morath", "Varese"],
         "pl": ["w Meah", "w Rifthold", "w Morath", "w Varese"]
       },
-      "answer": 2
+      "all_question": 15
     },
       {
       "id": 11,
@@ -131,7 +130,7 @@
         "en": ["Lyria", "Mab", "Lysandra", "Lyvia"],
         "pl": ["Lyria", "Mab", "Lysandra", "Lyvia"]
       },
-      "answer": 0
+      "all_question": 15
     },
       {
       "id": 12,
@@ -143,7 +142,7 @@
         "en": ["8", "4", "6", "12"],
         "pl": ["8", "4", "6", "12"]
       },
-      "answer": 2
+      "all_question": 15
     },
       {
       "id": 13,
@@ -155,7 +154,7 @@
         "en": ["onyx", "emerald", "grey", "amber"],
         "pl": ["onyksowe", "szmaragdowe", "szare", "bursztynowe"]
       },
-      "answer": 0
+      "all_question": 15
     },
       {
       "id": 14,
@@ -167,7 +166,7 @@
         "en": ["Sword of Orynth", "Morath", "Goldryn", "Damaris"],
         "pl": ["Miecz Orynthu", "Morath", "Goldryn", "Damaris"]
       },
-      "answer": 0
+      "all_question": 15
     },
     {
       "id": 15,
@@ -179,8 +178,70 @@
         "en": ["Hollin", "Brannon", "Dorian", "Chaol"],
         "pl": ["Hollin", "Brannon", "Dorian", "Chaol"]
       },
-      "answer": 2
+      "all_question": 15
     }],
+    "Throne_of_glass_ans": [
+      {
+        "id": 1,
+        "answer": 1
+      },
+      {
+        "id": 2,
+        "answer": 0
+      },
+      {
+        "id": 3,
+        "answer": 0
+      },
+      {
+        "id": 4,
+        "answer": 3
+      },
+      {
+        "id": 5,
+        "answer": 1
+      },
+      {
+        "id": 6,
+        "answer": 2
+      },
+      {
+        "id": 7,
+        "answer": 2
+      },
+      {
+        "id": 8,
+        "answer": 0
+      },
+      {
+        "id": 9,
+        "answer": 3
+      },
+      {
+        "id": 10,
+        "answer": 2
+      },
+      {
+        "id": 11,
+        "answer": 0
+      },
+      {
+        "id": 12,
+        "answer": 2
+      },
+      {
+        "id": 13,
+        "answer": 0
+      },
+      {
+        "id": 14,
+        "answer": 0
+      },
+      {
+        "id": 15,
+        "answer": 2
+      }
+    ],
     "Harry_Potter": [
     {
       "id": 1,
@@ -192,7 +253,7 @@
         "en": ["Relashio", "Defodio", "Episkey", "Reducto"],
         "pl": ["Relashio", "Defodio", "Episkey", "Reducto"]
       },
-      "answer": 1
+      "all_question": 10
     },
     {
       "id": 2,
@@ -204,7 +265,7 @@
         "en": ["virgio", "leo", "gemini", "libra"],
         "pl": ["panna", "lew", "bliźnięta", "wodnik"]
       },
-      "answer": 1
+      "all_question": 10
     },
     {
       "id": 3,
@@ -216,7 +277,7 @@
         "en": ["December 24th", "July 24th", "July 31st", "September 13th"],
         "pl": ["24 grudnia", "24 lipca", "31 lipca", "13 września"]
       },
-      "answer": 2
+      "all_question": 10
     },
     {
       "id": 4,
@@ -228,7 +289,7 @@
         "en": ["Wizard Dueling", "fighting a Dragon", "Wizard's Chess", "a Maze"],
         "pl": ["pojedynek czarodziejów", "walka ze smokiem", "czarodziejskie szachy", "labirynt"]
       },
-      "answer": 1
+      "all_question": 10
     },
       {
       "id": 5,
@@ -240,7 +301,7 @@
         "en": ["150", "200", "100", "120"],
         "pl": ["150", "200", "100", "120"]
       },
-      "answer": 0
+      "all_question": 10
     },
       {
       "id": 6,
@@ -252,7 +313,7 @@
         "en": ["Hogwarts", "the London Underground", "his mother", "his siblings"],
         "pl": ["Hogwart", "londyńskie metro", "matkę", "rodzeństwo"]
       },
-      "answer": 1
+      "all_question": 10
     },
       {
       "id": 7,
@@ -264,7 +325,7 @@
         "en": ["There was nothing different about them", "They were all Halfblood", "They were all Mudbloods", "They were all Pureblood"],
         "pl": ["nic", "byli Półkrwiści", "byli Mugolakami", "byli Czystokrwiści"]
       },
-      "answer": 2
+      "all_question": 10
     },
       {
       "id": 8,
@@ -276,7 +337,7 @@
         "en": ["Lumos", "Obliviate", "Sectumsempra", "Avada Kedavra"],
         "pl": ["Lumos", "Obliviate", "Sectumsempra", "Avada Kedavra"]
       },
-      "answer": 1
+      "all_question": 10
     },
       {
       "id": 9,
@@ -288,7 +349,7 @@
         "en": ["Lucius", "Harry", "Salazar", "Riddle"],
         "pl": ["Lucius", "Harry", "Salazar", "Riddle"]
       },
-      "answer": 0
+      "all_question": 10
     },
       {
       "id": 10,
@@ -300,6 +361,48 @@
         "en": ["Flitwick", "Voldemort", "Snape", "Sprout"],
         "pl": ["Flitwicka", "Voldemorta", "Snape'a", "Sprouta"]
       },
+      "all_question": 10
+    }
+  ],
+  "Harry_Potter_ans": [
+    {
+      "id": 1,
+      "answer": 1
+    },
+    {
+      "id": 2,
+      "answer": 1
+    },
+    {
+      "id": 3,
+      "answer": 2
+    },
+    {
+      "id": 4,
+      "answer": 1
+    },
+    {
+      "id": 5,
+      "answer": 0
+    },
+    {
+      "id": 6,
+      "answer": 1
+    },
+    {
+      "id": 7,
+      "answer": 2
+    },
+    {
+      "id": 8,
+      "answer": 1
+    },
+    {
+      "id": 9,
+      "answer": 0
+    },
+    {
+      "id": 10,
       "answer": 2
     }
   ],
@@ -314,7 +417,7 @@
         "en": ["piano", "violin", "drums", "guitar"],
         "pl": ["pianino", "skrzypce", "trójkąt", "perkusja"]
       },
-      "answer": 0
+      "all_question": 10
     },
     {
       "id": 2,
@@ -326,7 +429,7 @@
         "en": ["biology", "spanish", "chemistry", "trigonometry"],
         "pl": ["biologia", "hiszpański", "chemia", "trygonometria"]
       },
-      "answer": 0
+      "all_question": 10
     },
     {
       "id": 3,
@@ -338,7 +441,7 @@
         "en": ["Alice", "Edward", "Jasper", "Esme"],
         "pl": ["Alice", "Edward", "Jasper", "Esme"]
       },
-      "answer": 2
+      "all_question": 10
     },
     {
       "id": 4,
@@ -350,7 +453,7 @@
         "en": ["Grizzly Bears", "Mountain Lion", "cat", "deer"],
         "pl": ["niedźwiedzie Grizzly", "lwy górskie", "koty", "sarny"]
       },
-      "answer": 1
+      "all_question": 10
     },
       {
       "id": 5,
@@ -362,7 +465,7 @@
         "en": ["Jacob", "Paul", "Jared", "Sam"],
         "pl": ["Jacob", "Paul", "Jared", "Sam"]
       },
-      "answer": 3
+      "all_question": 10
     },
       {
       "id": 6,
@@ -374,7 +477,7 @@
         "en": ["Alice", "Edward", "Carlise", "Jasper"],
         "pl": ["Alice", "Edward", "Carlise", "Jasper"]
       },
-      "answer": 0
+      "all_question": 10
     },
       {
       "id": 7,
@@ -386,7 +489,7 @@
         "en": ["She smells bad", "She plays dumb in class", "He can't read her mind", "She acts like she's the best"],
         "pl": ["brzydko pachnie", "udaje głupią", "nie słyszy jej myśli", "jest zbyt pewna siebie"]
       },
-      "answer": 2
+      "all_question": 10
     },
       {
       "id": 8,
@@ -398,7 +501,7 @@
         "en": ["old-timey uniforms", "thunder", "aluminum bats", "rubber baseballs"],
         "pl": ["starych uniformów", "burzy", "aluminiowych kiji", "gumowych piłek"]
       },
-      "answer": 1
+      "all_question": 10
     },
       {
       "id": 9,
@@ -410,7 +513,7 @@
         "en": ["wrist", "nose", "middle finger", "leg"],
         "pl": ["nadgarstek", "nos", "środkowy palec", "nogę"]
       },
-      "answer": 0
+      "all_question": 10
     },
       {
       "id": 10,
@@ -422,6 +525,48 @@
         "en": ["16", "17", "2", "18"],
         "pl": ["16", "17", "2", "18"]
       },
+      "all_question": 10
+    }
+  ],
+  "Twilight_ans": [
+    {
+      "id": 1,
+      "answer": 0
+    },
+    {
+      "id": 2,
+      "answer": 0
+    },
+    {
+      "id": 3,
+      "answer": 2
+    },
+    {
+      "id": 4,
+      "answer": 1
+    },
+    {
+      "id": 5,
+      "answer": 3
+    },
+    {
+      "id": 6,
+      "answer": 0
+    },
+    {
+      "id": 7,
+      "answer": 2
+    },
+    {
+      "id": 8,
+      "answer": 1
+    },
+    {
+      "id": 9,
+      "answer": 0
+    },
+    {
+      "id": 10,
       "answer": 1
     }
   ],
@@ -436,7 +581,7 @@
         "en": ["In a hunting accident", "In a mine explosion", "He became trapped in a collapsed mine", "He was murdered by the Capitol"],
         "pl": ["podczas polowania", "w eksplozji", "spadł z dachu", "został zabity przez Capitol"]
       },
-      "answer": 1
+      "all_question": 7
     },
     {
       "id": 2,
@@ -448,7 +593,7 @@
         "en": ["cooking", "using an axe", "setting snares", "swimming"],
         "pl": ["gotowanie", "strzelanie z łuku", "ustawianie pułapek", "pływanie"]
       },
-      "answer": 2
+      "all_question": 7
     },
     {
       "id": 3,
@@ -460,7 +605,7 @@
         "en": ["Madge", "Gale", "Peeta", "Prim"],
         "pl": ["Madge", "Gale", "Peeta", "Prim"]
       },
-      "answer": 0
+      "all_question": 7
     },
     {
       "id": 4,
@@ -472,7 +617,7 @@
         "en": ["Katniss was looking for food and Peeta gave her bread", "At the Hunger Games", "They were both in the woods hunting", "Peeta was injured and Katniss’s mother helped him"],
         "pl": ["Katniss szukała jedzenia i Peeta dał jej chleb", "podczas Igrzysk Śmierci", "na polowaniu", "matka Katniss opatrywała Peetę"]
       },
-      "answer": 0
+      "all_question": 7
     },
       {
       "id": 5,
@@ -484,7 +629,7 @@
         "en": ["food", "water", "shelter", "fire"],
         "pl": ["jedzenie", "woda", "schron", "ogień"]
       },
-      "answer": 1
+      "all_question": 7
     },
       {
       "id": 6,
@@ -496,7 +641,7 @@
         "en": ["Harvesting Day", "Reaping Day", "Threshing Day", "Selection Day"],
         "pl": ["Żniwa", "Dożynki", "Dzień świstaka", "Wybory"]
       },
-      "answer": 1
+      "all_question": 7
       },
       {
       "id": 7,
@@ -508,7 +653,37 @@
         "en": ["tongue", "heart", "nose", "eyes"],
         "pl": ["język", "serce", "nos", "oczy"]
       },
+      "all_question": 7
+    }
+    ],
+  "The_Hunger_Games_ans": [
+    {
+      "id": 1,
+      "answer": 1
+    },
+    {
+      "id": 2,
+      "answer": 2
+    },
+    {
+      "id": 3,
+      "answer": 0
+    },
+    {
+      "id": 4,
+      "answer": 0
+    },
+    {
+      "id": 5,
+      "answer": 1
+    },
+    {
+      "id": 6,
+      "answer": 1
+    },
+    {
+      "id": 7,
       "answer": 0
     }
-    ]}
+  ]}
   
