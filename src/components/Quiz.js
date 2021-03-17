@@ -1,47 +1,38 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch, connect } from 'react-redux';
 import FinishCard from './FinishCard';
+import { next } from '../actions';
+import { getQuestion } from '../actions/questionActions';
+import { getOptions } from '../actions/optionsActions';
+import { getQuizlen } from '../actions/quizlenActions';
+import { getAnswer } from '../actions/answerActions';
 import { Link } from 'react-router-dom'; 
 import {useTranslation} from "react-i18next";
-import axios from 'axios';
 
 function Quiz() {
     const {t, i18n} = useTranslation('common');
+    const dispatch = useDispatch();
 
     const book = useSelector(state => state.book);
     const color = useSelector(state => state.color);
-    const lang = useSelector(state => state.lang);
+    const currentQuestion = useSelector(state => state.currentQuestion);
 
-    const [currentQuestion, setCurrentQuestion] = useState(1);
+
     const [options, setOptions] = useState([]);
     const [questions, setQuestions] = useState('');
-    const [answer, setAnswer] = useState(0);
     const [myAnswer, setMyAnswer] = useState(0);
     const [counter, setCounter] = useState(0);
     const [isFinished, setIsFinished] = useState(false);
     const [rightAns, setRightAns] = useState(false);
     const [quizLen, setQuizLen] = useState(0);
 
-    const API = `http://localhost:3000/${book}/${currentQuestion}`;
-    const API_ans = `http://localhost:3000/${book}_ans/${currentQuestion}`;
-
-    const getData = async() => {
-        const response = await axios.get(API);
-        const data = response.data;
-        setQuestions(data.question[lang]);
-        setAnswer(data.answer);
-        setOptions(data.options[lang]);
-        setQuizLen(data.all_question);
-    };
-    
-    const handleChangeQuestion = async() => {
-        const response = await axios.get(API_ans);
-        const data = response.data;
-        setAnswer(data.answer);
-        if(myAnswer===answer){
-          setCounter(counter+1);
+    const handleChangeQuestion = () => {
+        let ans = dispatch(getAnswer());
+        dispatch(getAnswer());
+        if(!ans.error && !ans.loading && myAnswer===ans){
+          dispatch(next());
         }
-        setCurrentQuestion(currentQuestion+1);
+        dispatch(next());
         let opt = document.querySelectorAll('.option');
         opt.forEach(o=>{
             o.classList.remove("bg-green-200")
@@ -52,34 +43,36 @@ function Quiz() {
     const mounted = useRef(false);
     useEffect(() => {
         if(!mounted.current) {
-            getData();
+            dispatch(getQuestion());
+            dispatch(getOptions());
+            dispatch(getQuizlen());
             mounted.current = true;
         } else {
-            getData();
+            dispatch(getQuestion());
+            dispatch(getOptions());
+            dispatch(getQuizlen());
         }
     });
 
     const handleCheckAnswer = async (myAnswer, i) => {
-        const response = await axios.get(API_ans);
-        const data = response.data;
-        setAnswer(data.answer);
+        let ans = dispatch(getAnswer());
+        dispatch(getAnswer());
         setMyAnswer(options.indexOf(myAnswer));
-        if (myAnswer===data.answer){
+        if (myAnswer===ans.answer){
             let element = document.getElementById(i);
             element.classList.toggle("bg-green-200");
         } else {
             let element = document.getElementById(i);
             element.classList.toggle("bg-red-200");
-            let element2 = document.getElementById(data.answer);
+            let element2 = document.getElementById(ans.answer);
             element2.classList.toggle("bg-green-200");
         };
     };
 
     const handleFinish = async()=>{
         setIsFinished(true);
-        const response = await axios.get(API_ans);
-        const data = response.data;
-        setAnswer(data.answer);
+        let ans = dispatch(getAnswer());
+        dispatch(getAnswer());
     };
 
     return (
@@ -110,4 +103,4 @@ function Quiz() {
     );
 }
 
-export default Quiz;
+export default connect(Quiz);

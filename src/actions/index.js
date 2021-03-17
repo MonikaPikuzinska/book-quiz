@@ -1,3 +1,9 @@
+export const next = () => {
+    return {
+        type: 'next'
+    }
+};
+
 export const en = () => {
     return {
         type: 'en'

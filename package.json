@@ -1,6 +1,6 @@
 {
   "homepage": "https://monikapikuzinska.github.io/book-quiz/",
-  "name": "quiz-throne-of-glass",
+  "name": "book-quiz",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,7 +13,7 @@
     "i18next": "^19.8.7",
     "i18next-browser-languagedetector": "^6.0.1",
     "postcss": "^8.2.4",
-    "react": "^16.13.0",
+    "react": "^16.14.0",
     "react-dom": "^16.13.0",
     "react-i18next": "^11.8.5",
     "react-redux": "^7.2.2",
@@ -25,7 +25,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "server": "json-server --watch db.json",
+    "server": "json-server --watch src/db.json --port 3001",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
