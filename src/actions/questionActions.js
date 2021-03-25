@@ -1,24 +1,18 @@
-import { useSelector, useDispatch, connect } from 'react-redux';
-import { API } from '../components/API';
 import axios from 'axios';
 
-const book = useSelector(state => state.book);
-const dispatch = useDispatch();
-const lang = useSelector(state => state.lang);
-const currentQuestion = useSelector(state => state.currentQuestion);
-const APILink = `${API}/${book}/${currentQuestion}`;
-
-export const getQuestion = async() => {
+export const getQuestion = (lang, APILink, dispatch) => {
+    return dispatch => {
     dispatch(fetchQuestionBegin());
-    await axios.get(APILink)
-        .then(function (res) {
-            res.json();
-        })
-        .then(function (json) {
+    return axios.get(APILink)
+        .then(json => {
             dispatch(fetchQuestionSuccess(json.question[lang]));
             return json.question[lang];
-        })
+      })
+        .catch(error =>
+            dispatch(fetchQuestionFailure(error))
+      );
     }
+}
 
 export const FETCH_QUESTION_BEGIN   = 'FETCH_QUESTION_BEGIN';
 export const FETCH_QUESTION_SUCCESS = 'FETCH_QUESTION_SUCCESS';

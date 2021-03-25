@@ -1,13 +1,6 @@
-import { useSelector, useDispatch, connect } from 'react-redux';
-import { API } from '../components/API';
 import axios from 'axios';
 
-const book = useSelector(state => state.book);
-const dispatch = useDispatch();
-const currentQuestion = useSelector(state => state.currentQuestion);
-const APILink = `${API}/${book}/${currentQuestion}`;
-
-export const getQuizlen = () => {
+export const getQuizlen = (APILink, dispatch) => {
     dispatch(fetchQuizlenBegin());
     axios.get(APILink)
         .then(function (res) {

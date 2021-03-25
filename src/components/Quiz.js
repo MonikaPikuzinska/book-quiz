@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useSelector, useDispatch, connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import FinishCard from './FinishCard';
+import { API } from './API';
 import { next } from '../actions';
 import { getQuestion } from '../actions/questionActions';
 import { getOptions } from '../actions/optionsActions';
@@ -14,8 +15,12 @@ function Quiz() {
     const dispatch = useDispatch();
 
     const book = useSelector(state => state.book);
+    const lang = useSelector(state => state.lang);
+    
     const color = useSelector(state => state.color);
     const currentQuestion = useSelector(state => state.currentQuestion);
+    const APILink = `${API}/${book}/${currentQuestion}`;
+    const APILink_ans = `${API}/${book}_ans/${currentQuestion}`;
 
 
     const [options, setOptions] = useState([]);
@@ -27,8 +32,8 @@ function Quiz() {
     const [quizLen, setQuizLen] = useState(0);
 
     const handleChangeQuestion = () => {
-        let ans = dispatch(getAnswer());
-        dispatch(getAnswer());
+        let ans = dispatch(getAnswer(APILink_ans, dispatch));
+        dispatch(getAnswer(APILink_ans, dispatch));
         if(!ans.error && !ans.loading && myAnswer===ans){
           dispatch(next());
         }
@@ -42,21 +47,21 @@ function Quiz() {
 
     const mounted = useRef(false);
     useEffect(() => {
-        if(!mounted.current) {
-            dispatch(getQuestion());
-            dispatch(getOptions());
-            dispatch(getQuizlen());
-            mounted.current = true;
-        } else {
-            dispatch(getQuestion());
-            dispatch(getOptions());
-            dispatch(getQuizlen());
-        }
+        // if(!mounted.current) {
+            dispatch(getQuestion(lang, APILink, dispatch));
+            dispatch(getOptions(lang, APILink, dispatch));
+            dispatch(getQuizlen(APILink, dispatch));
+        //     mounted.current = true;
+        // } else {
+        //     dispatch(getQuestion(lang, APILink, dispatch));
+        //     dispatch(getOptions(lang, APILink, dispatch));
+        //     dispatch(getQuizlen(APILink, dispatch));
+        // }
     });
 
     const handleCheckAnswer = async (myAnswer, i) => {
-        let ans = dispatch(getAnswer());
-        dispatch(getAnswer());
+        let ans = dispatch(getAnswer(APILink_ans, dispatch));
+        dispatch(getAnswer(APILink_ans, dispatch));
         setMyAnswer(options.indexOf(myAnswer));
         if (myAnswer===ans.answer){
             let element = document.getElementById(i);
@@ -71,8 +76,8 @@ function Quiz() {
 
     const handleFinish = async()=>{
         setIsFinished(true);
-        let ans = dispatch(getAnswer());
-        dispatch(getAnswer());
+        let ans = dispatch(getAnswer(APILink_ans, dispatch));
+        dispatch(getAnswer(APILink_ans, dispatch));
     };
 
     return (
@@ -103,4 +108,4 @@ function Quiz() {
     );
 }
 
-export default connect(Quiz);
+export default Quiz;
