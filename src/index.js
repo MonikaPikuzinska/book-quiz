@@ -11,7 +11,7 @@ import { createStore, applyMiddleware } from 'redux';
 import allReducers from './reducers';
 import thunk from "redux-thunk";
 import { Provider } from 'react-redux';
-
+import { fetchQuestion } from "./actions/questionActions";
 i18next.init({
     interpolation: { escapeValue: false },  
     lng: 'en',                              
@@ -26,6 +26,7 @@ i18next.init({
 });
 
 const store = createStore(allReducers, applyMiddleware(thunk));
+// store.dispatch(fetchQuestion)
 
 ReactDOM.render(
     <Provider store={store}>

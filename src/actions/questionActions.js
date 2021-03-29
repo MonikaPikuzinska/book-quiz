@@ -1,33 +1,22 @@
-import axios from 'axios';
+import { client } from './client';
 
-export const getQuestion = (lang, APILink, dispatch) => {
-    return dispatch => {
-    dispatch(fetchQuestionBegin());
-    return axios.get(APILink)
-        .then(json => {
-            dispatch(fetchQuestionSuccess(json.question[lang]));
-            return json.question[lang];
-      })
-        .catch(error =>
-            dispatch(fetchQuestionFailure(error))
-      );
+const initialState = []
+
+export default function questionReducer(state = initialState, action) {
+  switch (action.type) {
+    case 'question/questionLoaded': {
+      return [...state, action.payload]
     }
+    default:
+      return state
+  }
+}
+export function fetchNewQuestion(url) {
+  return async function fetchQuestion (dispatch, getState) {
+  const response = await client.get(url)
+  dispatch({ type: 'question/questionLoaded', payload: response })
+} 
 }
 
-export const FETCH_QUESTION_BEGIN   = 'FETCH_QUESTION_BEGIN';
-export const FETCH_QUESTION_SUCCESS = 'FETCH_QUESTION_SUCCESS';
-export const FETCH_QUESTION_FAILURE = 'FETCH_QUESTION_FAILURE';
+export const selectAllQuestion = (state) => state.question
 
-export const fetchQuestionBegin = () => ({
-    type: FETCH_QUESTION_BEGIN
-  });
-  
-export const fetchQuestionSuccess = question => ({
-    type: FETCH_QUESTION_SUCCESS,
-    payload: { question }
-  });
-  
-export const fetchQuestionFailure = error => ({
-    type: FETCH_QUESTION_FAILURE,
-    payload: { error }
-  });
