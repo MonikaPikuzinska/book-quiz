@@ -20,20 +20,16 @@ function Quiz() {
     const currentQuestion = useSelector(state => state.currentQuestion);
     const APILink = `${API}/${book}/${currentQuestion}`;
     const APILink_ans = `${API}/${book}_ans/${currentQuestion}`;
-    const questionStatus = useSelector((state) => state);
-
-
-    const [options, setOptions] = useState([]);
-    const [questions, setQuestions] = useState('');
+    const question = useSelector(state => state.question);
+    const options = useSelector(state => state.question);
+    const quizLen = useSelector(state => state.question);
+    const rightAns = useSelector(state => state.answer);
     const [myAnswer, setMyAnswer] = useState(0);
     const [counter, setCounter] = useState(0);
     const [isFinished, setIsFinished] = useState(false);
-    const [rightAns, setRightAns] = useState(false);
-    const [quizLen, setQuizLen] = useState(0);
 
     const handleChangeQuestion = () => {
-        dispatch(fetchNewAnswer(APILink_ans))
-        if(questionStatus.answer.length>0 && myAnswer===questionStatus.answer[0].answer){
+        if(rightAns.length>0 && myAnswer===rightAns[0].answer){
           dispatch(next());
           setCounter(counter+1);
           dispatch(fetchNewQuestion(APILink));
@@ -46,29 +42,41 @@ function Quiz() {
             o.classList.remove("bg-red-200")
         });
       };
-
+    
     useEffect(() => {
-        dispatch(fetchNewQuestion(APILink))
+        dispatch(fetchNewQuestion(APILink));
     },[]);
-
-    const handleCheckAnswer = async (myAnswer, i) => {
-        dispatch(fetchNewAnswer(APILink_ans))
-        setMyAnswer(options.indexOf(myAnswer));
-        if (questionStatus.answer.length>0 && myAnswer===questionStatus.answer[0].answer){
-            let element = document.getElementById(i);
+    useEffect(() => {
+        dispatch(fetchNewQuestion(APILink_ans));
+        console.log(rightAns);
+        if (rightAns.length>0 && myAnswer===rightAns[0].answer){
+            let element = document.getElementById(myAnswer);
             element.classList.toggle("bg-green-200");
-        } else if (questionStatus.answer.length>0) {
-            let element = document.getElementById(i);
+        } else if (rightAns.length>0) {
+            let element = document.getElementById(myAnswer);
             element.classList.toggle("bg-red-200");
-            let element2 = document.getElementById(questionStatus.answer[0].answer);
+            let element2 = document.getElementById(rightAns[0].answer);
             element2.classList.toggle("bg-green-200");
         };
+    },[myAnswer]);
+    const handleCheckAnswer = (myanswer, i) => {
+        // setMyAnswer(options[0].options[lang].indexOf(myanswer));
+        setMyAnswer(i);
+        // if (rightAns.length>0 && myAnswer===rightAns[0].answer){
+        //     let element = document.getElementById(i);
+        //     element.classList.toggle("bg-green-200");
+        // } else if (rightAns.length>0) {
+        //     let element = document.getElementById(i);
+        //     element.classList.toggle("bg-red-200");
+        //     let element2 = document.getElementById(rightAns[0].answer);
+        //     element2.classList.toggle("bg-green-200");
+        // };
     };
 
-    const handleFinish = async()=>{
+    const handleFinish = ()=>{
         setIsFinished(true);
         dispatch(fetchNewAnswer(APILink_ans))
-        if(questionStatus.answer.length>0 && myAnswer===questionStatus.answer[0].answer){
+        if(rightAns.length>0 && myAnswer===rightAns[0].answer){
           setCounter(counter+1);
         }
     };
@@ -78,17 +86,17 @@ function Quiz() {
         (isFinished)? 
             <FinishCard counter={counter}/>
          :<> {       
-            questionStatus.question.length>0?
+            question.length>0?
                 <div className="flex flex-col">
                     <button className="italic flex-grow-0 w-36 font-bold border border-gray-700 text-gray-700 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-gray-800 focus:outline-none focus:shadow-outline"><Link to={'/'}>{t(`quiz.main`)}</Link></button>
                     <h2 className={`p-4 text-center self-center block italic font-bold text-8xl text-${color}-400`}>{t(`welcome.${book}`)}</h2>
                     <div className="flex flex-col self-center p-8 m-8 shadow-2xl">
-                    <h2>{currentQuestion}  / {questionStatus.question[0].all_question} </h2>
-                    <h1 className="text-center p-2 text-xl block italic font-bold">{questionStatus.question[0].question[lang]} </h1>
-                    {questionStatus.question[0].options[lang].map((option, i)=> (
-                    <div id={i} onClick={()=>handleCheckAnswer(option, i)} className={rightAns ? "option text-center p-4 cursor-pointer text-xl block bg-gray-700" : "option text-center cursor-pointer p-4 text-xl block "} >{option}</div>
+                    <h2>{currentQuestion}  / {quizLen[0].all_question} </h2>
+                    <h1 className="text-center p-2 text-xl block italic font-bold">{question[0].question[lang]} </h1>
+                    {options[0].options[lang].map((option, i)=> (
+                    <div id={i} onClick={()=>handleCheckAnswer(option, i)} className="option text-center cursor-pointer p-4 text-xl block " >{option}</div>
                     ))}
-                    {currentQuestion<questionStatus.question[0].all_question ?
+                    {currentQuestion<quizLen[0].all_question ?
                         <button className="self-center italic flex-grow-0 w-36 font-bold border border-gray-700 text-gray-700 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-gray-800 focus:outline-none focus:shadow-outline"
                         onClick={handleChangeQuestion}
                         >
