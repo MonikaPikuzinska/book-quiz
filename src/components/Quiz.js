@@ -32,13 +32,9 @@ function Quiz() {
           setCounter(counter+1);
         };
         dispatch(next());
-        setAnswerChecked(false);
-        let opt = document.querySelectorAll('.ansopt');
-        // opt.forEach(o=>{
-        //     o.classList.remove("bg-red-200")
-        //     o.classList.remove("bg-green-200")
-        // });        
+        setAnswerChecked(false);       
       };
+      
     useEffect(()=>{
         dispatch(fetchNewQuestion(APILink));       
     },[currentQuestion]);
