@@ -18,5 +18,3 @@ export function fetchNewQuestion(url) {
 } 
 }
 
-export const selectAllQuestion = (state) => state.question
-

@@ -1,6 +1,5 @@
 import React from 'react';
 import Quiz from './Quiz';
-import {QuestionList} from './QuizApp';
 import HomePage from './HomePage';
 import { Route, Switch } from 'react-router-dom'; 
 

@@ -17,6 +17,3 @@ export function fetchNewAnswer(url) {
   dispatch({ type: 'answer/answerLoaded', payload: response })
 } 
 }
-
-export const selectAllQuestion = (state) => state.question
-
